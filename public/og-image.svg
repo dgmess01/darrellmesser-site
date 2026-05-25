@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Darrell Messer professional website preview">
+  <rect width="1200" height="630" fill="#f7f5ef"/>
+  <rect x="72" y="72" width="1056" height="486" rx="18" fill="#ffffff" stroke="#d9ddd9"/>
+  <text x="116" y="190" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#b37a2c">Kentucky Attorney • Salesforce Consultant</text>
+  <text x="116" y="300" font-family="Arial, sans-serif" font-size="78" font-weight="800" fill="#172026">Darrell Messer</text>
+  <text x="116" y="380" font-family="Arial, sans-serif" font-size="42" fill="#164d67">Legal, CRM, and technology problem-solving</text>
+  <circle cx="978" cy="314" r="118" fill="#164d67"/>
+  <text x="978" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="72" font-weight="800" fill="#fff">DM</text>
+</svg>

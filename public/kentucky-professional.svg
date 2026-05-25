@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 680" role="img" aria-label="Abstract Kentucky professional landscape">
+  <rect width="900" height="680" fill="none"/>
+  <path d="M103 405c84-101 172-151 264-151 96 0 150 52 247 39 67-9 118-44 186-101v368H103V405Z" fill="#dfe9e5"/>
+  <path d="M82 475c85-75 154-99 229-77 71 21 114 76 202 72 84-4 151-59 305-55v145H82v-85Z" fill="#c7d8d1"/>
+  <path d="M262 164h288c30 0 54 24 54 54v218c0 30-24 54-54 54H262c-30 0-54-24-54-54V218c0-30 24-54 54-54Z" fill="#fff" stroke="#d9ddd9" stroke-width="4"/>
+  <path d="M250 225h312M250 291h220M250 357h260" stroke="#164d67" stroke-width="18" stroke-linecap="round"/>
+  <path d="M620 241l66 66-137 137-85 19 19-85 137-137Z" fill="#b37a2c"/>
+  <path d="M620 241l66 66" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+</svg>

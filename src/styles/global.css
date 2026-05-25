@@ -1,0 +1,428 @@
+:root {
+  color-scheme: light;
+  --bg: #f7f5ef;
+  --surface: #ffffff;
+  --ink: #172026;
+  --muted: #5c6870;
+  --line: #d9ddd9;
+  --blue: #164d67;
+  --blue-dark: #0d3348;
+  --green: #3f6d5a;
+  --gold: #b37a2c;
+  --shadow: 0 20px 50px rgb(23 32 38 / 12%);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px clamp(20px, 5vw, 72px);
+  background: rgb(247 245 239 / 92%);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand span {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 800;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px 18px;
+  font-size: 0.94rem;
+  color: var(--muted);
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.nav a:hover,
+.nav a:focus-visible {
+  color: var(--blue);
+}
+
+main {
+  overflow: hidden;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+  gap: clamp(32px, 6vw, 80px);
+  min-height: calc(100vh - 80px);
+  align-items: center;
+  padding: clamp(56px, 8vw, 104px) clamp(20px, 5vw, 72px);
+  background:
+    linear-gradient(110deg, rgb(247 245 239 / 95%) 0%, rgb(247 245 239 / 72%) 56%, rgb(22 77 103 / 12%) 100%),
+    url("/kentucky-professional.svg") center right / min(54vw, 760px) auto no-repeat;
+}
+
+.hero-content {
+  max-width: 820px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--gold);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  max-width: 12ch;
+  margin: 0;
+  font-size: clamp(3rem, 7vw, 6.6rem);
+  line-height: 0.96;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  line-height: 1.06;
+  letter-spacing: 0;
+}
+
+h3 {
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.hero-copy {
+  max-width: 680px;
+  margin: 28px 0 0;
+  color: var(--muted);
+  font-size: clamp(1.08rem, 1.8vw, 1.3rem);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.button.primary {
+  background: var(--blue);
+  color: #fff;
+}
+
+.button.secondary {
+  border: 1px solid var(--line);
+  background: rgb(255 255 255 / 72%);
+  color: var(--blue-dark);
+}
+
+.hero-panel,
+.service-card,
+.about-note {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgb(255 255 255 / 88%);
+  box-shadow: var(--shadow);
+}
+
+.hero-panel {
+  padding: 28px;
+}
+
+.hero-panel dl,
+.hero-panel dd {
+  margin: 0;
+}
+
+.hero-panel div {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-panel div:first-child {
+  padding-top: 0;
+}
+
+.hero-panel div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.hero-panel dt {
+  margin-bottom: 6px;
+  color: var(--green);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-panel dd {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.section,
+.feature-section,
+.about,
+.contact {
+  padding: clamp(56px, 8vw, 96px) clamp(20px, 5vw, 72px);
+}
+
+.section-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 32px;
+  align-items: end;
+  margin-bottom: 34px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.service-card {
+  padding: 28px;
+}
+
+.service-card p,
+.feature-copy p,
+.feature-copy li,
+.about-copy p,
+.about-note p,
+.contact p,
+.site-footer {
+  color: var(--muted);
+}
+
+.feature-section,
+.about,
+.contact {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: start;
+  border-top: 1px solid var(--line);
+}
+
+.feature-section.alt {
+  background: #edf3f1;
+}
+
+.feature-copy {
+  font-size: 1.04rem;
+}
+
+.feature-copy p:first-child,
+.about-copy p:first-of-type,
+.contact p {
+  margin-top: 0;
+}
+
+.feature-copy ul {
+  display: grid;
+  gap: 10px;
+  margin: 24px 0 0;
+  padding-left: 22px;
+}
+
+.about {
+  background: #ffffff;
+}
+
+.about-copy {
+  max-width: 840px;
+}
+
+.about-note {
+  padding: 28px;
+  box-shadow: none;
+}
+
+.contact {
+  background: var(--blue-dark);
+  color: #fff;
+}
+
+.contact .eyebrow {
+  color: #dfb36d;
+}
+
+.contact p {
+  color: rgb(255 255 255 / 74%);
+}
+
+.contact-list {
+  display: grid;
+  gap: 14px;
+  font-style: normal;
+}
+
+.contact-list a {
+  display: grid;
+  gap: 4px;
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 8px;
+  padding: 20px;
+  background: rgb(255 255 255 / 8%);
+  text-decoration: none;
+}
+
+.contact-list span {
+  color: rgb(255 255 255 / 68%);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.contact-list strong {
+  overflow-wrap: anywhere;
+}
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 28px clamp(20px, 5vw, 72px);
+  border-top: 1px solid var(--line);
+  font-size: 0.94rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer a {
+  color: var(--blue);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 3px solid #dfb36d;
+  outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav {
+    justify-content: flex-start;
+  }
+
+  .hero,
+  .section-heading,
+  .feature-section,
+  .about,
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+    background:
+      linear-gradient(180deg, rgb(247 245 239 / 96%), rgb(247 245 239 / 88%)),
+      url("/kentucky-professional.svg") top right / 520px auto no-repeat;
+  }
+
+  h1 {
+    max-width: 11ch;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-header {
+    position: static;
+  }
+
+  .brand span {
+    width: 38px;
+    height: 38px;
+  }
+
+  .nav {
+    gap: 8px 14px;
+    font-size: 0.9rem;
+  }
+
+  .hero-actions,
+  .button {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+}

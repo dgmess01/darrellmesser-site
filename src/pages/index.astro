@@ -1,0 +1,221 @@
+---
+import "../styles/global.css";
+
+const pageTitle = "Darrell Messer | Attorney, Salesforce Consultant, Technology Advisor";
+const description =
+  "Professional website for Darrell Messer, a Kentucky attorney, Salesforce consultant, and technology/project problem-solving professional.";
+const siteUrl = "https://www.darrellmesser.com";
+
+const services = [
+  {
+    title: "Legal Practice",
+    text:
+      "Practical legal support for individuals, teams, and organizations that need clear guidance, careful judgment, and steady execution."
+  },
+  {
+    title: "Salesforce & CRM Consulting",
+    text:
+      "Salesforce strategy, implementation support, workflow refinement, reporting, and user-centered CRM improvements."
+  },
+  {
+    title: "Technical Strategy",
+    text:
+      "Project leadership, systems thinking, process design, and problem-solving across legal, operational, and technology contexts."
+  }
+];
+
+const contactLinks = [
+  { label: "Email", href: "mailto:contact@example.com", value: "contact@example.com" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/example", value: "linkedin.com/in/example" }
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={siteUrl} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Darrell Messer" />
+    <meta property="og:image" content={`${siteUrl}/og-image.svg`} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteUrl}/og-image.svg`} />
+
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Darrell Messer home">
+        <span aria-hidden="true">DM</span>
+        <strong>Darrell Messer</strong>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#legal">Legal</a>
+        <a href="#crm">CRM</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">Kentucky attorney • Salesforce consultant • Technical strategist</p>
+          <h1 id="hero-title">Clear judgment for legal, CRM, and technology challenges.</h1>
+          <p class="hero-copy">
+            Darrell Messer helps people and organizations make practical decisions where law,
+            business process, software, and project execution intersect.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#contact">Start a Conversation</a>
+            <a class="button secondary" href="#services">View Services</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Professional focus areas">
+          <dl>
+            <div>
+              <dt>Location</dt>
+              <dd>Kentucky</dd>
+            </div>
+            <div>
+              <dt>Focus</dt>
+              <dd>Legal, CRM, technology, and project problem-solving</dd>
+            </div>
+            <div>
+              <dt>Approach</dt>
+              <dd>Plain-language analysis, practical systems, measurable next steps</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="section" id="services" aria-labelledby="services-title">
+        <div class="section-heading">
+          <p class="eyebrow">Services</p>
+          <h2 id="services-title">Professional support across connected disciplines.</h2>
+        </div>
+        <div class="service-grid">
+          {services.map((service) => (
+            <article class="service-card">
+              <h3>{service.title}</h3>
+              <p>{service.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="feature-section" id="legal" aria-labelledby="legal-title">
+        <div>
+          <p class="eyebrow">Legal Practice</p>
+          <h2 id="legal-title">Grounded legal guidance for Kentucky matters.</h2>
+        </div>
+        <div class="feature-copy">
+          <p>
+            Legal work benefits from careful listening, precise issue spotting, and a clear
+            understanding of practical constraints. Public-facing practice details can be tailored
+            here to reflect current services, jurisdictions, and engagement requirements.
+          </p>
+          <ul>
+            <li>Client-centered analysis and communication</li>
+            <li>Professional judgment informed by process and documentation</li>
+            <li>Public placeholders ready for confirmed practice-area language</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="feature-section alt" id="crm" aria-labelledby="crm-title">
+        <div>
+          <p class="eyebrow">Salesforce & CRM Consulting</p>
+          <h2 id="crm-title">CRM systems that support the way teams actually work.</h2>
+        </div>
+        <div class="feature-copy">
+          <p>
+            Salesforce and CRM projects succeed when business goals, data quality, workflows, and
+            user adoption are treated as one system. Consulting work can cover strategy,
+            implementation support, reporting, automation planning, and operational cleanup.
+          </p>
+          <ul>
+            <li>Salesforce process mapping and implementation support</li>
+            <li>Reports, dashboards, data hygiene, and adoption planning</li>
+            <li>Workflow improvements designed for maintainability</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="feature-section" id="strategy" aria-labelledby="strategy-title">
+        <div>
+          <p class="eyebrow">Technical Strategy</p>
+          <h2 id="strategy-title">Structured problem-solving for complex projects.</h2>
+        </div>
+        <div class="feature-copy">
+          <p>
+            Technology and project work often breaks down when decisions are scattered across
+            stakeholders, tools, and assumptions. A disciplined strategy process turns ambiguity
+            into priorities, scope, implementation plans, and durable operating habits.
+          </p>
+          <ul>
+            <li>Project scoping and decision support</li>
+            <li>Process design, documentation, and change planning</li>
+            <li>Cross-functional coordination between legal, business, and technical teams</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="about" id="about" aria-labelledby="about-title">
+        <div class="about-copy">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">A multidisciplinary professional with a practical bias.</h2>
+          <p>
+            Darrell Messer brings together legal training, CRM consulting experience, and technical
+            project judgment. This site is intentionally concise and public-facing, leaving room for
+            verified biography, credentials, representative experience, and engagement terms to be
+            added without exposing private personal details.
+          </p>
+        </div>
+        <div class="about-note">
+          <h3>Working Style</h3>
+          <p>
+            Careful analysis, plain communication, realistic plans, and solutions that can be
+            maintained after the first launch.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Discuss a legal, Salesforce, or technology matter.</h2>
+          <p>
+            Replace the placeholders below with preferred public contact channels before launch.
+            Avoid adding private phone numbers, personal addresses, or confidential intake details.
+          </p>
+        </div>
+        <address class="contact-list">
+          {contactLinks.map((link) => (
+            <a href={link.href}>
+              <span>{link.label}</span>
+              <strong>{link.value}</strong>
+            </a>
+          ))}
+        </address>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; {new Date().getFullYear()} Darrell Messer. All rights reserved.</p>
+      <a href="#top">Back to top</a>
+    </footer>
+  </body>
+</html>
